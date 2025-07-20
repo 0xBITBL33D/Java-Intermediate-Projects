@@ -8,6 +8,7 @@ class Bank{
                   "[1] - Withdraw\n"                +
                   "[2] - Make a New Account\n"      +
                   "[3] - Draft a Complaint";
+
     public static void main(String[] args) {
         Bank bank = new Bank();
 
