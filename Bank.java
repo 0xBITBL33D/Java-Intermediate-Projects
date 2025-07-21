@@ -23,16 +23,32 @@ public class Bank{
 
     //DEFAULT BALANCE
     private double bankBalance = 0;
+    
 
+    //GETTERS AND SETTERS
     double getBalance(){
         return bankBalance;
     }
 
-    int setBalance(double NewBalance, int choice){
+    double setBalance(double baladjust, int choice){
+
+        double NewBalance = baladjust;
 
         while(true) {
-            if(choice == 1 && NewBalance > getBalance()) {
-                
+
+            //1
+            if(choice == 1 && NewBalance > 0){
+                return bankBalance += NewBalance;
+            }
+
+            else if(choice == 2 && NewBalance <= getBalance()){
+                return bankBalance -= NewBalance;
+            }
+
+            else{
+                System.out.println("Invalid\nNo Changes will be made.");
+                System.out.print(bankBalance);
+                return bankBalance;
             }
         }
 
