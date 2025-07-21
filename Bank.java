@@ -1,18 +1,17 @@
-class Bank{
+public class Bank{
+    
+    public String menu = "Welcome to Bitbl33d's Bank!\n\n"  +
+                         "[0] - Make an Account\n"          +
+                         "[1] - Deposit"                    +
+                         "[2] - Withdraw"                   +
+                         "[3] - Delete an Account"          ;
 
-    String Menu = "Welcome to Bitbl33d's Bank\n"    +
-                  "How may we help you?\n\n"        +
-
-
-                  "[0] - Bank Balance\n"            +
-                  "[1] - Withdraw\n"                +
-                  "[2] - Make a New Account\n"      +
-                  "[3] - Draft a Complaint";
 
     public static void main(String[] args) {
-        Bank bank = new Bank();
+        Bank Bank = new Bank();
 
-        System.out.print(bank.Menu);
+        System.out.print(Bank.menu);
 
+        
     }
 }
