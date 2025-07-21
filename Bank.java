@@ -14,14 +14,14 @@ import java.util.Scanner;
 
 public class Bank{
     
-    public static String menu = "Welcome to Bitbl33d's Bank!\n\n"  +
-                         "[0] - Checkq Account\n"          +
-                         "[1] - Deposit"                    +
-                         "[2] - Withdraw"                   +
-                         "[3] - Delete an Account"          ; /*Still not needed but maybe we can pseudomake this
-                                                                by creating a string to create the illusion of a
-                                                                user. Then erasing that new string by calling [3]
-                                                                method                                            */
+    public static String menu = "Welcome to Bitbl33d's Bank!\n\n"   +
+                         "[0] - Check Account\n"                   +
+                         "[1] - Deposit\n"                          +
+                         "[2] - Withdraw\n"                         +
+                         "[3] - Delete an Account\nChoice: "        ; /*Still not needed but maybe we can pseudomake this
+                                                                      by creating a string to create the illusion of a
+                                                                      user. Then erasing that new string by calling [3]
+                                                                      method                                            */
 
 
     //DEFAULT BALANCE
@@ -41,11 +41,17 @@ public class Bank{
 
             //1
             if(choice == 1 && NewBalance > 0){
-                return bankBalance += NewBalance;
+                bankBalance += NewBalance;
+                System.out.printf("Your Bank Balance: %d", getBalance());
+                return bankBalance;
             }
 
+            //2
             else if(choice == 2 && NewBalance <= getBalance()){
-                return bankBalance -= NewBalance;
+                bankBalance -= NewBalance;
+                System.out.printf("Your Bank Balance: %d", getBalance());
+                return bankBalance;
+                
             }
 
             else{
@@ -57,9 +63,19 @@ public class Bank{
 
     }
 
-    public double checkDoubleValidity(double adjustbal){
+    public double checkDoubleValidity(Scanner sc){
 
-        return adjustbal;
+        while(true){
+            if(sc.hasNextDouble()){
+                double adjustBal = sc.nextDouble();
+
+                return adjustBal;
+            }
+
+            else{
+                continue;
+            }
+        }
     }
 
     //MENU LOOP
@@ -78,6 +94,9 @@ public class Bank{
                     break;
 
                     case 1:
+
+                    System.out.print("Enter Your Money: ");
+                    setBalance(checkDoubleValidity(sc), choice);
                     
                 }
             
@@ -88,13 +107,8 @@ public class Bank{
 
     public static void main(String[] args) {
         Bank Bank = new Bank();
-
-        System.out.print(menu);
-
         Scanner sc = new Scanner(System.in);
-
-        sc.close();
-
+        Bank.MenuLoop(sc);
         
     }
 }
