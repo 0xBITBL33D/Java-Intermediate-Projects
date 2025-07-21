@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Bank{
     
     public static String menu = "Welcome to Bitbl33d's Bank!\n\n"  +
-                         "[0] - Make an Account\n"          +
+                         "[0] - Checkq Account\n"          +
                          "[1] - Deposit"                    +
                          "[2] - Withdraw"                   +
                          "[3] - Delete an Account"          ;
@@ -47,7 +47,7 @@ public class Bank{
 
             else{
                 System.out.println("Invalid\nNo Changes will be made.");
-                System.out.print(bankBalance);
+                System.out.printf("Your Bank Balance: %d", getBalance());
                 return bankBalance;
             }
         }
@@ -55,10 +55,17 @@ public class Bank{
     }
 
     //MENU LOOP
-    public static void MenuLoop(Scanner sc) {
+    public void MenuLoop(Scanner sc) {
         while(true)
         {
             System.out.print(menu);
+            int choice = sc.nextInt();
+
+            switch(choice){
+
+                case 0:
+                System.out.println("Your Bank Balance is: " + getBalance());
+            }
 
         }
     }
