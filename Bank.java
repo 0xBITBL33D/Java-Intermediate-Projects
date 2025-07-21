@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 public class Bank{
     
-    public String menu = "Welcome to Bitbl33d's Bank!\n\n"  +
+    public static String menu = "Welcome to Bitbl33d's Bank!\n\n"  +
                          "[0] - Make an Account\n"          +
                          "[1] - Deposit"                    +
                          "[2] - Withdraw"                   +
@@ -24,23 +24,37 @@ public class Bank{
     //DEFAULT BALANCE
     private double bankBalance = 0;
 
-    void getBalance(){
-        System.out.print(bankBalance);
+    double getBalance(){
+        return bankBalance;
+    }
+
+    int setBalance(double NewBalance, int choice){
+
+        while(true) {
+            if(choice == 1 && NewBalance > getBalance()) {
+                
+            }
+        }
+
     }
 
     //MENU LOOP
-    public static void MenuLoop() {
-        
+    public static void MenuLoop(Scanner sc) {
+        while(true)
+        {
+            System.out.print(menu);
+
+        }
     }
 
     public static void main(String[] args) {
         Bank Bank = new Bank();
 
-        System.out.print(Bank.menu);
+        System.out.print(menu);
 
         Scanner sc = new Scanner(System.in);
 
-        
+        sc.close();
 
         
     }
