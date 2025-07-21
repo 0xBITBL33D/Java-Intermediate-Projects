@@ -18,7 +18,10 @@ public class Bank{
                          "[0] - Checkq Account\n"          +
                          "[1] - Deposit"                    +
                          "[2] - Withdraw"                   +
-                         "[3] - Delete an Account"          ;
+                         "[3] - Delete an Account"          ; /*Still not needed but maybe we can pseudomake this
+                                                                by creating a string to create the illusion of a
+                                                                user. Then erasing that new string by calling [3]
+                                                                method                                            */
 
 
     //DEFAULT BALANCE
@@ -54,17 +57,30 @@ public class Bank{
 
     }
 
+    public double checkDoubleValidity(double adjustbal){
+
+        return adjustbal;
+    }
+
     //MENU LOOP
     public void MenuLoop(Scanner sc) {
         while(true)
         {
             System.out.print(menu);
-            int choice = sc.nextInt();
 
-            switch(choice){
+            if(sc.hasNextInt()) {
+                int choice = sc.nextInt();
 
-                case 0:
-                System.out.println("Your Bank Balance is: " + getBalance());
+                switch(choice){
+
+                    case 0:
+                    System.out.println("Your Bank Balance is: " + getBalance());
+                    break;
+
+                    case 1:
+                    
+                }
+            
             }
 
         }
