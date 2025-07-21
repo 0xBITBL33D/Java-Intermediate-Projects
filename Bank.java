@@ -42,21 +42,24 @@ public class Bank{
             //1
             if(choice == 1 && NewBalance > 0){
                 bankBalance += NewBalance;
-                System.out.printf("Your Bank Balance: %d", getBalance());
+                System.out.printf("Your Bank Balance: %f", getBalance());
+                System.out.printf("\n");
                 return bankBalance;
             }
 
             //2
             else if(choice == 2 && NewBalance <= getBalance()){
                 bankBalance -= NewBalance;
-                System.out.printf("Your Bank Balance: %d", getBalance());
+                System.out.printf("Your Bank Balance: %f", getBalance());
+                System.out.printf("\n");
                 return bankBalance;
                 
             }
 
             else{
                 System.out.println("Invalid\nNo Changes will be made.");
-                System.out.printf("Your Bank Balance: %d", getBalance());
+                System.out.printf("Your Bank Balance: %f", getBalance());
+                System.out.printf("\n");
                 return bankBalance;
             }
         }
@@ -68,11 +71,12 @@ public class Bank{
         while(true){
             if(sc.hasNextDouble()){
                 double adjustBal = sc.nextDouble();
-
+                sc.nextLine();
                 return adjustBal;
             }
 
             else{
+                sc.nextLine();
                 continue;
             }
         }
@@ -82,14 +86,17 @@ public class Bank{
     public void MenuLoop(Scanner sc) {
         while(true)
         {
-            System.out.print(menu);
+            System.out.println(menu);
 
-            if(sc.hasNextInt()) {
-                int choice = sc.nextInt();
-
-                switch(choice){
+            if(sc.hasNextLine()) {
+                String choiceString = sc.nextLine().replaceAll("\\D", "");
+                    if(choiceString.isEmpty()) continue;
+                    int choice = Integer.parseInt(choiceString);
+                    
+                    switch(choice){
 
                     case 0:
+
                     System.out.println("Your Bank Balance is: " + getBalance());
                     break;
 
@@ -97,9 +104,32 @@ public class Bank{
 
                     System.out.print("Enter Your Money: ");
                     setBalance(checkDoubleValidity(sc), choice);
+                    break;
+
+                    case 2:
+
+                    System.out.print("Enter Withdraw Amount: ");
+                    setBalance(checkDoubleValidity(sc), choice);
+                    break;
+
+                    case 3:
+
+                    System.out.println("#To Do!");
+                    break;
                     
+                    default:
+
+                    System.out.println("Out of Bounds prolly :D");
+                    break;
+
                 }
-            
+
+
+                
+            }
+
+            else{
+                break;
             }
 
         }
