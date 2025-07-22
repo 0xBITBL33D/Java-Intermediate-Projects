@@ -26,6 +26,12 @@ public class Bank{
 
     //DEFAULT BALANCE
     private double bankBalance = 0;
+    private String userName = "User";
+
+    Bank(double setDefAmount, String userName) {
+        bankBalance = setDefAmount;
+        this.userName 
+    }
     
 
     //GETTERS AND SETTERS
@@ -137,8 +143,11 @@ public class Bank{
 
     public static void main(String[] args) {
         Bank bankAcount = new Bank();
+
         Scanner sc = new Scanner(System.in);
+
         bankAcount.MenuLoop(sc);
         
+        sc.close();
     }
 }
