@@ -13,8 +13,11 @@
 import java.util.Scanner;
 
 public class Bank{
+     //DEFAULT BALANCE
+    private double bankBalance = 0;
+    private String userName = "User";
     
-    public static String menu = "Welcome to Bitbl33d's Bank!\n\n"   +
+    public String menu = "Welcome to Bitbl33d's Bank!\n\n"   + userName +
                          "[0] - Check Account\n"                    +
                          "[1] - Deposit\n"                          +
                          "[2] - Withdraw\n"                         +
@@ -24,13 +27,9 @@ public class Bank{
                                                                       method                                            */
 
 
-    //DEFAULT BALANCE
-    private double bankBalance = 0;
-    private String userName = "User";
-
     Bank(double setDefAmount, String userName) {
         bankBalance = setDefAmount;
-        this.userName 
+        this.userName = userName;
     }
     
 
