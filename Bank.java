@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Bank{
     
     public static String menu = "Welcome to Bitbl33d's Bank!\n\n"   +
-                         "[0] - Check Account\n"                   +
+                         "[0] - Check Account\n"                    +
                          "[1] - Deposit\n"                          +
                          "[2] - Withdraw\n"                         +
                          "[3] - Delete an Account\nChoice: "        ; /*Still not needed but maybe we can pseudomake this
