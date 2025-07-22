@@ -1,15 +1,3 @@
-/*
-    Create a BankAccount class that lets users:
-
-    Set an initial balance via constructor
-
-    Deposit and withdraw money
-
-    Check the current balance
-
-    Prevent balance from going negative (encapsulation logic)
- */
-
 import java.util.Scanner;
 
 public class Bank{
