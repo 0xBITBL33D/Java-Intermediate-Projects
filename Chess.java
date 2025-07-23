@@ -1,11 +1,13 @@
+package chess.app;
+
+import chess.board.Board;
 import java.util.Scanner;
 
-public class Chess{
-  public String chess_menu = "Welcome To Chess";
+public class Game {
 
-  
-  public static void main(String[] args){
+    private Board board;
+    private boolean whiteturn;
+    public static void main(String[] args){
 
-    
-  }
+    }
 }
