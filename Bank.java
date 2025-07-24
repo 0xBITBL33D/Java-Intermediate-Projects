@@ -1,4 +1,4 @@
-fimport java.util.Scanner;
+import java.util.Scanner;
 
 public class Bank{
      //DEFAULT BALANCE
