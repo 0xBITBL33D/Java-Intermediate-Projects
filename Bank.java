@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Bank{
-     //DEFAULT BALANCE
+     //DEFAULT BALANCEff
     private double bankBalance = 0;
     private String userName = "User";
     
