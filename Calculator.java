@@ -3,6 +3,24 @@ import java.util.Scanner;
 
 public class Test {
 
+    public static double verify(Scanner sc){
+        double num;
+        while(true) {
+            try{
+                if(sc.hasNextDouble()){
+                    num = sc.nextDouble();
+                    return num;
+                }
+            }
+
+            catch(InputMismatchException e) {
+                sc.next();
+                continue;
+            }
+
+        }
+    }
+
     public static double add(double a, double b){
         return a + b;
     }
@@ -45,6 +63,10 @@ public class Test {
             switch (choice) {
                 case 1:
                     System.out.println("You chose Add.");
+                    System.out.printf("Enter First Num: ");
+                    verify(sc);
+
+
                     break;
                 case 2:
                     System.out.println("You chose Subtract.");
