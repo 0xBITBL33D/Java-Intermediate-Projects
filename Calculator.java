@@ -2,6 +2,23 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Test {
+
+    public static double add(int a, int b){
+
+    }
+
+    public static double subtract(){
+
+    }
+
+    public static double multiply(){
+
+    }
+    
+    public static double divide(){
+
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         while (true) {
@@ -14,6 +31,7 @@ public class Test {
                             +    "Choose operation: ");
 
             int choice;
+
             try{
                 choice = sc.nextInt();
             }
