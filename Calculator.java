@@ -62,11 +62,16 @@ public class Test {
 
             switch (choice) {
                 case 1:
+                    double num1, num2;
                     System.out.println("You chose Add.");
+
                     System.out.printf("Enter First Num: ");
-                    verify(sc);
+                    num1 = verify(sc);
 
+                    System.out.printf("Enter Second Num: ");
+                    num2 = verify(sc);
 
+                    System.out.printf("%f + %f = %f", num1, num2, add(num1, num2));
                     break;
                 case 2:
                     System.out.println("You chose Subtract.");
