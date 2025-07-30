@@ -33,8 +33,25 @@ public class Test {
         return a * b;
     }
 
-    public static double divide(double a, double b){
-        return a / b;
+    public static double divide(double a, double b, Scanner sc){
+
+        while(true) {
+            if(b == 0) {
+
+                System.err.print("\nDivision by Zero Not Allowed\nRe-Enter: ");
+  
+                try{
+                    if(sc.hasNextDouble() && b = sc.hasNextDouble() > 10 ) {
+                    }
+                }
+
+                catch(InputMismatchException e) {
+                    sc.next();
+                    continue;
+                }
+                
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -71,16 +88,40 @@ public class Test {
                     System.out.printf("Enter Second Num: ");
                     num2 = verify(sc);
 
-                    System.out.printf("%f + %f = %f", num1, num2, add(num1, num2));
+                    System.out.printf("%f + %f = %f\n", num1, num2, add(num1, num2));
                     break;
                 case 2:
                     System.out.println("You chose Subtract.");
+                    
+                    System.out.printf("Enter First Num: ");
+                    num1 = verify(sc);
+
+                    System.out.printf("Enter Second Num: ");
+                    num2 = verify(sc);
+
+                    System.out.printf("%f + %f = %f\n", num1, num2, subtract(num1, num2));
                     break;
                 case 3:
                     System.out.println("You chose Multiply.");
+
+                    System.out.printf("Enter First Num: ");
+                    num1 = verify(sc);
+
+                    System.out.printf("Enter Second Num: ");
+                    num2 = verify(sc);
+
+                    System.out.printf("%f + %f = %f\n", num1, num2, multiply(num1, num2));
                     break;
                 case 4:
                     System.out.println("You chose Divide.");
+
+                    System.out.printf("Enter First Num: ");
+                    num1 = verify(sc);
+
+                    System.out.printf("Enter Second Num: ");
+                    num2 = verify(sc);
+
+                    System.out.printf("%f + %f = %f\n", num1, num2, divide(num1, num2));
                     break;
                 case 5:
                     System.out.println("Goodbye!");
