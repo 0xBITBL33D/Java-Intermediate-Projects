@@ -59,10 +59,10 @@ public class Test {
                 continue;
             }
 
-
+            double num1, num2;
             switch (choice) {
                 case 1:
-                    double num1, num2;
+
                     System.out.println("You chose Add.");
 
                     System.out.printf("Enter First Num: ");
