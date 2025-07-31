@@ -39,10 +39,14 @@ public class Test {
             if(b == 0) {
 
                 System.err.print("\nDivision by Zero Not Allowed\nRe-Enter: ");
-  
+                b = sc.nextDouble();
                 try{
-                    if(sc.hasNextDouble() && b = sc.hasNextDouble() > 10 ) {
+                    if(b == 0) {
+                        continue;
                     }
+
+                    else;
+                    return a / b;
                 }
 
                 catch(InputMismatchException e) {
@@ -121,7 +125,7 @@ public class Test {
                     System.out.printf("Enter Second Num: ");
                     num2 = verify(sc);
 
-                    System.out.printf("%f + %f = %f\n", num1, num2, divide(num1, num2));
+                    System.out.printf("%f + %f = %f\n", num1, num2, divide(num1, num2, sc));
                     break;
                 case 5:
                     System.out.println("Goodbye!");
