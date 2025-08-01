@@ -44,17 +44,16 @@ public class Test {
                     if(b == 0) {
                         continue;
                     }
-
-                    else;
-                    return a / b;
                 }
 
-                catch(InputMismatchException e) {
+                catch(NumberFormatException e) {
                     sc.next();
                     continue;
                 }
-                
+
+            return a / b;
             }
+            return a / b;
         }
     }
 
